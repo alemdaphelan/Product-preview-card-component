@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    padding:6rem;
+    width:100vw;
+    height:100vh;
+    background: var(--Cream);
+    display:flex;
+    place-content:center;
+    place-items: center;
+    overflow: hidden;
+}
+.container{
+    background: var(--White);
+    display: flex;
+    border-radius: 10px;
+    width:580px;
+    min-width:580px;
+}
+.article-desktop{
+    width:50%;
+    border-radius: 10px 0 0 10px;
+}
+.article-mobile{
+    display:none;
+}
+.content{
+    width:50%;
+    padding:2rem;
+}
+.label{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color:var(--Dark-grayish-blue);
+}
+h1{
+    font-family: 'Fraunces',sans-serif;
+    font-weight: 700;
+    font-size:30px;
+    line-height: 1.8rem;
+    color:var(--Very-dark-blue);
+}
+.infor{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color:var(--Dark-grayish-blue);
+    line-height: 1.5rem;
+}
+span{
+    display: flex;
+    gap:1.5rem;
+    place-items: center;
+    margin-top:-1rem
+}
+.price{
+    font-size: 30px;
+    font-family: 'Fraunces',sans-serif;
+    font-weight: 700;
+    color:var(--Dark-cyan)
+}
+.not-price{
+    color:var(--Dark-grayish-blue);
+    text-decoration: line-through;
+    font-size:14px
+}
+
+button{
+    background: var(--Dark-cyan);
+    color:var(--White);
+    padding:1rem;
+    font-weight: 500;
+    font-size:16px;
+    width:100%;
+    font-family: 'Montserrat',sans-serif;
+    border:none;
+    border-radius: 10px;
+    display: flex;
+    gap:.5rem;
+    place-content:center;
+}
+button:hover{
+    background-color: hsl(158, 36%, 20%);
+    cursor:pointer;
+}
+button:active{
+    background-color: hsl(158, 36%, 20%);
+    cursor: pointer;
+}
+@media screen and (max-width:580px){
+    body{
+        padding-block:2rem;
+    }
+    .container{
+        width:335px;
+        min-width:335px;
+        max-width:335px;
+        flex-direction: column;
+    }
+    .article-desktop{
+        display:none;
+    }
+    .article-mobile{
+        display:flex;
+        width:100%;
+        max-width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+    .content{
+        width:100%;
+        max-width: 100%;
+        padding-inline:1.5rem;
+        padding-block: 1.5rem;
+    }
+    button{
+        margin-top:-1rem;
+    }
+    .infor{
+        margin-bottom:-.5rem;
+        margin-top:-.5rem;
+    }
+    label{
+        margin-bottom:-.5rem;
+    }
+}
